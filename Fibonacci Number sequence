@@ -1,0 +1,22 @@
+# the length of our Fibonacci sequence
+nterms = int(input("How many terms to print? "))
+
+# first two terms
+x,y = 0, 1
+count = 0
+
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Please enter a positive integer")
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(x)
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(x)
+       nth = x + y
+       # update values
+       x = y
+       y = nth
+       count += 1
